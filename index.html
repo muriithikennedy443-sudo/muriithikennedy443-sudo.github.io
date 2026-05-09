@@ -211,6 +211,44 @@
     .timeline-item p { color: var(--muted); font-size: 0.9rem; line-height: 1.5; }
     .timeline-item span { font-weight: 700; color: var(--text); display: block; }
 
+    /* ── HOBBIES ── */
+    .hobbies-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hobby-card {
+  background: #161b22;
+  border: 1px solid #21262d;
+  border-radius: 16px;
+  padding: 24px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  transition: border-color 0.3s, transform 0.2s;
+}
+
+.hobby-card:hover {
+  transform: translateY(-3px);
+  border-color: #2dd4bf44;
+}
+
+.hobby-icon { font-size: 2rem; flex-shrink: 0; }
+.hobby-name { font-weight: 700; color: #fff; margin-bottom: 5px; }
+.hobby-desc { font-size: 0.88rem; color: #8b949e; line-height: 1.5; }
+
+.hobby-tag {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.7rem;
+  color: #2dd4bf;
+  background: #2dd4bf14;
+  border: 1px solid #2dd4bf33;
+  border-radius: 20px;
+  padding: 3px 10px;
+}
+
     /* ── SKILLS ── */
     #skills { background: var(--bg); }
     .skills-grid {
@@ -453,12 +491,12 @@
               <div class="stat-label">Languages</div>
             </div>
             <div class="stat">
-              <div class="stat-num" data-target="10">0</div>
+              <div class="stat-num" data-target="2">0</div>
               <div class="stat-label">Projects</div>
             </div>
             <div class="stat">
-              <div class="stat-num" data-target="1">0</div>
-              <div class="stat-label">Year Learning</div>
+              <div class="stat-num" data-target="3 months">0</div>
+              <div class="stat-label">Learning Period</div>
             </div>
           </div>
         </div>
@@ -482,21 +520,53 @@
               <p><span>Java & JavaScript</span>Exploring programming logic and DOM manipulation.</p>
             </div>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-dot" style="background:#f59e0b"></div>
-            <div class="timeline-item-content">
-              <p><span>Python</span>Learning scripting and automation for backend concepts.</p>
-            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- HOBBIES -->
+<section id="hobbies">
+  <p class="section-label">02 // HOBBIES</p>
+  <h2 class="section-title">Beyond the Code</h2>
+
+  <div class="hobbies-grid">
+
+    <div class="hobby-card">
+      <span class="hobby-icon">🛹</span>
+      <div class="hobby-content">
+        <p class="hobby-name">Skating</p>
+        <p class="hobby-desc">Passionate skater — the balance, focus, and persistence skating demands directly mirrors the coding mindset.</p>
+        <span class="hobby-tag">pro level</span>
+      </div>
+    </div>
+
+    <div class="hobby-card">
+      <span class="hobby-icon">📖</span>
+      <div class="hobby-content">
+        <p class="hobby-name">Reading</p>
+        <p class="hobby-desc">Tech blogs, programming books, and anything that keeps me learning and growing.</p>
+        <span class="hobby-tag">self-improvement</span>
+      </div>
+    </div>
+
+    <div class="hobby-card">
+      <span class="hobby-icon">🌍</span>
+      <div class="hobby-content">
+        <p class="hobby-name">Exploring Tech Trends</p>
+        <p class="hobby-desc">Staying up to date with AI, Web3, and new developer tools. Always curious about where technology is heading.</p>
+        <span class="hobby-tag">always curious</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
   <!-- SKILLS -->
   <section id="skills">
     <div class="container">
-      <div class="section-label">02 // Skills</div>
+      <div class="section-label">03 // Skills</div>
       <h2 class="section-title">What I Know</h2>
       <div class="skills-grid reveal">
         <div class="skill-card">
@@ -518,12 +588,6 @@
           <div class="skill-bar-wrap"><div class="skill-bar" data-width="60"></div></div>
         </div>
         <div class="skill-card">
-          <div class="skill-icon">🐍</div>
-          <div class="skill-name">Python</div>
-          <div class="skill-desc">Scripting, automation, back-end basics</div>
-          <div class="skill-bar-wrap"><div class="skill-bar" data-width="55"></div></div>
-        </div>
-        <div class="skill-card">
           <div class="skill-icon">☕</div>
           <div class="skill-name">Java</div>
           <div class="skill-desc">Object-oriented programming concepts</div>
@@ -534,12 +598,6 @@
           <div class="skill-name">Git & GitHub</div>
           <div class="skill-desc">Version control and collaboration</div>
           <div class="skill-bar-wrap"><div class="skill-bar" data-width="70"></div></div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-icon">📱</div>
-          <div class="skill-name">Responsive Design</div>
-          <div class="skill-desc">Mobile-friendly layouts and media queries</div>
-          <div class="skill-bar-wrap"><div class="skill-bar" data-width="72"></div></div>
         </div>
         <div class="skill-card">
           <div class="skill-icon">🔧</div>
@@ -554,7 +612,7 @@
   <!-- PROJECTS -->
   <section id="projects">
     <div class="container">
-      <div class="section-label">03 // Projects</div>
+      <div class="section-label">04 // Projects</div>
       <h2 class="section-title">What I've Built</h2>
       <div class="projects-grid reveal">
         <div class="project-card">
@@ -597,7 +655,7 @@
   <!-- CONTACT -->
   <section id="contact">
     <div class="container">
-      <div class="section-label">04 // Contact</div>
+      <div class="section-label">05 // Contact</div>
       <h2 class="section-title">Let's Connect</h2>
       <div class="contact-grid reveal">
         <div class="contact-info">
